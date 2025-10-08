@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Portafolio</title>
-    <meta name="description" content="Portafolio de
-    fran">
+    <meta name="description" content="Portafolio de Francisco">
 
     <!-- Open graph: si el contenido se comparte en redes -->
-    <meta property="og:title" content="Portafolio de un 
-    Ingeniero de Software">
-    <meta property="og:description" content="Portafolio de Fran,
-    3 años de experiencia como Ingeniero de Software">
+    <meta property="og:title" 
+    content="Portafolio de un Ingeniero de Software">
+    <meta property="og:description" 
+    content="Portafolio de Francisco,3 años de 
+    experiencia como Ingeniero de Software">
     <meta property="og:image" content="./images/photo.png">
-    <meta property="og:image:alt" content="Una fotografia de Fran">
+    <meta property="og:image:alt" 
+    content="Una fotografia de Francisco">
 
     <link rel="alternate" href="https://fran.dev/en" hreflang="en-GB">
     <link rel="canonical" href="https://fran.dev"> 
@@ -21,33 +22,77 @@
 
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#09f">
-    <link rel="icon" type="image/jpg" href="./images/photo.png">
+    <link rel="icon" type="image/jpg" href="./images/fav_icon.png">
 
 </head>
 <body>
-    <h1>Portafolio de @fran</h1>
-    <p>3 años de experiencia como 
-        <strong>Ingeniero de Software</strong>
-        Egresado y apasionado de
-        la vida.
-    </p>
-    <h2>Experiencia</h2>
-    <ul>
-        <li class="list-item">CARFAX MX - 2022</li>
-        <li class="list-item">TELEPERFORMANCE - 2017</li>
-        <li class="list-item">BANAMEX - 2015</li>
-    </ul>
+    <header>
+        <h1>Portafolio de Francisco Vera</h1>
+        <nav>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#proyectps">Proyectos</a>
+            <a 
+                href="https://www.linkedin.com/in/francisco-vera-mx/"
+                target="_blank"
+                rel="noreferrer"
+                >Linkedin</a>
+        </nav>
+    </header>
 
-    <img
-        id="photo-image"
-        width="200"
-        height="200"
-        title="Foto de fran"
-        alt=""
-        src="./images/photo.png"
+    <main>
+        <p>3 años de experiencia como 
+            <strong>Ingeniero de Software</strong>
+            Egresado y apasionado de
+            la vida.
+        </p>
+        <h2 id="experiencia">Experiencia</h2>
+        <ul>
+            <li class="list-item">CARFAX MX - 2022</li>
+            <li class="list-item">TELEPERFORMANCE - 2017</li>
+            <li class="list-item">BANAMEX - 2015</li>
+        </ul>
+
+        <img
+            id="photo-image"
+            width="250"
+            height="300"
+            title="Foto de Francisco"
+            alt="Fotografía de Francisco sonriendo a la cámara."
+            src="./images/photo.jpg"
         >
 
-    
+        <h2 id="proyectos">Proyectos realizados</h2>
+
+        <aside>
+            <header>
+                <h3>Mis tecnologias favoritas</h3>
+            </header>
+            <ol>
+                <li>Python</li>
+                <li>Typescritpt</li>
+                <li>NestJS</li>
+                <li>Neo4J</li>
+            </ol>
+        </aside>
+
+        <section>
+            <article>
+                <header>
+                    <h4>Automatización de procesos</h4>
+                </header>
+                <p>
+                    Procesos....
+                </p>
+                <footer>
+                    <small>Tecnologías utilizadas: Python, Bases de datos (MySQL, PostgreSQL, Neo4J)</small>
+                </footer>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        Copyright
+    </footer>
 
 </body>
 </html>
