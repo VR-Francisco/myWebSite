@@ -39,7 +39,41 @@
         </nav>
     </header>
 
+    <!-- <audio controls src="./audio/spiderman.mp3"></audio> -->
+    <!-- <video autoplay loop muted src="./video/perro.MOV"></video> -->
+    
+    <dialog id="dialog">
+        <h1>¿Sabías que puedes abrir un modal así?</h1>
+        <p>¡Y es totalmente nativo!</p>
+        <button id="hide">Cerrar modal</button>
+    </dialog>
+
+    <button id="show">Ver más información</button>
+
+    <script>
+        window.show.addEventListener('click', ()=>{
+            window.dialog.showModal()
+        })
+
+        window.hide.addEventListener('click', ()=>{
+            window.dialog.close()
+        })
+    </script>
+
     <main>
+
+        <!-- podemos meter una página web completa como un vídeo, 
+        también le podemos decir en la metadata que por seguridad
+        no utilice mi página para insertar en otra página -->
+        <!-- <iframe 
+         style="width:100%; aspect-ratio:16/9;" 
+        src="https://www.youtube.com/embed/FhSZuKn_0ZQ?si=f7fgiheqlnDPnZLp" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe> -->
+
         <p>3 años de experiencia como 
             <strong>Ingeniero de Software</strong>
             Egresado y apasionado de
@@ -52,14 +86,18 @@
             <li class="list-item">BANAMEX - 2015</li>
         </ul>
 
-        <img
-            id="photo-image"
-            width="250"
-            height="300"
-            title="Foto de Francisco"
-            alt="Fotografía de Francisco sonriendo a la cámara."
-            src="./images/photo.jpg"
-        >
+        <!-- El download solo funciona con recursos nuestros o propios -->
+        <a download href="./images/photo.jpg">
+            <!-- loading="lazy" propiedad de img, carga la imagen cuando puede o cuando hay scrool, al principio no usarlo -->
+            <img
+                id="photo-image"
+                width="250"
+                height="300"
+                title="Foto de Francisco"
+                alt="Fotografía de Francisco sonriendo a la cámara."
+                src="./images/photo.jpg"
+            >
+        </a>
 
         <h2 id="proyectos">Proyectos realizados</h2>
 
@@ -68,6 +106,7 @@
                 <h3>Mis tecnologias favoritas</h3>
             </header>
             <ol>
+            <!-- <ol type="1" reversed start="10"> -->
                 <li>Python</li>
                 <li>Typescritpt</li>
                 <li>NestJS</li>
@@ -75,11 +114,16 @@
             </ol>
         </aside>
 
+        <!-- Sirve para que la etiqueta tenga roles específicos, hay muchos más..
+        <div role="alert">
+        </div> -->
+
         <section>
             <article>
                 <header>
                     <h4>Automatización de procesos</h4>
                 </header>
+
                 <p>
                     Procesos....
                 </p>
@@ -90,8 +134,103 @@
         </section>
     </main>
 
+    <section>
+        <h2>Preguntas frecuentes</h2>
+
+        <details open>
+            <summary>¿Qué estudios tienes?</summary>
+            <p>Estudié la carrera de Ingenieía en Informática en el IPN (UPIICSA)</p>
+        </details>
+        <details>
+            <summary>¿Cuáles son tus hobbies?</summary>
+            <p>Me gusta mucho ver películas, leer y hacer deporte.</p>
+        </details>
+        <details>
+            <summary>¿Cuál es tu lenguaje favorito?</summary>
+            <p>Me gusta mucho Python, la simplicidad y elegancia que tiene.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>Formulario de contacto</h2>
+
+        <form method="post" action="/">
+            <fieldset>
+                <legend>Información personal</legend>
+
+                <!-- <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre..."> -->
+                <div>
+                    <label>
+                        Nombre:
+                        <input type="text" name="name" placeholder="Ingresa tu nombre..." required>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Email:
+                        <input type="email" name="email" placeholder="Ingresa tu correo..." required>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información adicional</legend>
+                
+                <div>
+                    <label>
+                        Teléfono:
+                        <input type="tel" name="telefono" placeholder="Ingresa tu número..." required pattern="[0-9]{9}">
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Otros</legend>
+                
+                <div>
+                    <label for="why">¿Por qué quieres contactar?</label>
+                    <select name="why" id="why">
+                        <option value="1">Trabajo</option>
+                        <option value="2">Duda</option>
+                        <option value="3">Más información</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="terms">¿Aceptas los términos?</label>
+                    <input type="checkbox" id="terms" name="terms" required>
+                </div>
+                
+                <div>
+                    <datalist id="languages">
+                        <option value="JavaScript"></option>
+                        <option value="Python"></option>
+                        <option value="Java"></option>
+                        <option value="C#"></option>
+                    </datalist>
+                    <label>
+                        ¿Con qué lenguajes quieres que te ayude?
+                        <input list="languages" name="languages">
+                    </label>
+                </div>
+
+            </fieldset>
+
+            <!-- <input type="submit" value="Enviar contacto"> -->
+            <!-- Dentro de un form un botón es de tipo submit -->
+            <button>Enviar contacto</button>
+        </form>
+    </section>
+
     <footer>
-        Copyright
+        Copyright &copy; 2025 Francisco Vera. Todos los derechos reservados
+
+        <div>
+            <a href="mailto:fva960824@gmail.com">Envíame un correo</a>
+            <a href="tel:+525537776891">Llama por teléfono</a>
+            <a href="whatsapp://send?text=Hola Francisco">Contacta por Whatsapp</a>
+        </div>
     </footer>
 
 </body>
